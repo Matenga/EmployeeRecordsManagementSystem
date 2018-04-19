@@ -1,0 +1,155 @@
+<div class="card">
+	<div class="card-header">
+    <div class="row">
+      <div class="col-sm-6">
+        <b><h3>Employee Records 2018</h3></b>
+      </div>
+
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-outline-dark float-right" data-toggle="modal" data-target="#Modal"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></button>
+
+      <button type="button" class="btn btn-outline-dark float-right" style="margin-right:10px; " data-toggle="modal" data-target="#xModal"> <i class="fa fa-file-excel-o fa-2x" aria-hidden="true"></i></button>
+      </div>
+    </div>
+	</div>
+	<div class="card-body">
+<table class="table table-sm table-hover">
+  <thead>             
+   <th><b>S/No.</b></th>
+   <th><b>Profile <br>Photo</b></th>
+   <th><b>Name</b></th>
+   <th><b>Sex</b></th>
+   <th><b>Position</b></th>
+   <th><b>View</b></th> 
+   <th><b>Edit</b></th>  
+   <th><b>Delete</b></th>
+   </thead>
+<tbody>
+  <tr *ngFor="let employee of employeeList; let i = index ">
+      <td><b>{{i + 1}}</b></td>
+      <td><img [src]="url"></td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.sex}}</td>
+      <td>{{employee.position}}</td>
+      <td>
+        <a class="btn btn-outline" data-toggle="modal" data-target="#myModal">
+          <i class="fa fa-eye fa-2x"></i>
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-outline" (click)="onEdit(employee)">
+          <i class="fa fa-pencil-square-o fa-2x"></i>
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-outline" (click)="onDelete(employee.$key)">
+          <i class="fa fa-trash-o fa-2x"></i>
+        </a>
+      </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="modal fade" id="xModal">
+  <div class="modal-dialog" >
+    <div class="modal-content" style="padding: 10px !important;">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title text-center">Generate xlsx Document of Records</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Excel Function Soon Coming...
+      </div>
+
+      <!--Modal footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-block float-center" data-dismiss="modal"><i class="fa fa-file-excel-o fa-2x" aria-hidden="true"></i> Print </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="Modal">
+  <div class="modal-dialog" >
+    <div class="modal-content" style="padding: 10px !important;">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title text-center">Generate pdf Document of Records</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        pdf Function off 
+      </div>
+
+      <!--Modal footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-block float-center" data-dismiss="modal"><i class="fa fa-print fa-2x" aria-hidden="true"></i> Print </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog" >
+    <div class="modal-content" style="padding: 10px !important;">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title text-center">Employee's Profile</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+            <div class="row">
+      <div class="col-12 main-section text-center">
+          <div class="row">
+              <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
+          </div>
+          <div class="row user-detail">
+              <div class="col-lg-12 col-sm-12 col-12">
+                  <img src="assets/images/man01.png" class="rounded-circle img-thumbnail">
+                  <h4>Matenga Ivan O</h4>
+                  <p><i class="fa fa-map-marker" aria-hidden="true"></i> Azia Cell, Arua.</p>
+
+                  <hr>
+                  <h4>Manager</h4>
+                  <h5>2,500,000 Ugx Net</h5>
+                  <hr>
+                  <span>Lorem ips consectetur adipisium ,eiusmod tempor incididuin reprehendeanim.</span>
+              </div>
+          </div>
+          <div class="row user-social-detail">
+              <div class="col-lg-12 col-sm-12 col-12">
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </div>
+          </div>
+      </div>
+    </div>
+      </div>
+
+      <!-- Modal footer
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-block float-center" data-dismiss="modal"><i class="fa fa-print fa-2x" aria-hidden="true"></i> Print </button>
+      </div>-->
+
+    </div>
+  </div>
+</div>
+

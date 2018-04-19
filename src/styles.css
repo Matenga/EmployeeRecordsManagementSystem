@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-dirty{
+    border: 1px solid red;
+}
+button:hover,a.btn:hover{
+    cursor: pointer;
+   }
+
+.main-section{
+	border:1px solid #138496;
+	background-color: #fff;
+}
+.profile-header{
+	background-color: #17a2b8;
+	height:150px;
+}
+.user-detail{
+	margin:-100px 0px 30px 0px;
+}
+.user-detail img{
+	height:150px;
+	width:150px;
+}
+.user-detail h5{
+	margin:15px 0px 5px 0px;
+}
+.user-social-detail{
+	padding:15px 0px;
+	background-color: #17a2b8;
+}
+.user-social-detail a i{
+	color:#fff;
+	font-size:23px;
+	padding: 0px 5px;
+}
